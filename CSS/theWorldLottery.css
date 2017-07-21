@@ -11,6 +11,12 @@ button {
 	border:0px;
 }
 
+.picBox {
+	height:9em;
+	width:32%;
+	border: 1px solid black;
+}
+
 #header {
 	height: 3.5em;
 	background-color:rgba(0,0,0,.7);
@@ -39,6 +45,7 @@ button {
 	background-color:rgba(0,0,255,.6);
 	display:flex;
 	justify-content:space-around;
+	padding-top:1em;
 
 }
 
