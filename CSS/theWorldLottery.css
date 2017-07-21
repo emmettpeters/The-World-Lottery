@@ -1,1 +1,53 @@
-CSS HERE
+.w100 {
+	width:100%;
+}
+
+body {
+	margin:0px;
+}
+
+button {
+	background-color:rgba(0,0,0,0);
+	border:0px;
+}
+
+#header {
+	height: 3.5em;
+	background-color:rgba(0,0,0,.7);
+	display:flex;
+	justify-content:space-around;
+}
+
+#heroArea {
+	height: 48em;
+	background-color:rgba(225,0,0,.6);
+	text-align:center;
+}
+
+#heroArea h1 {
+	margin-top:0px;
+	padding-top:10em;
+}
+
+#content {
+	height: 50em;
+	background-color:rgba(0,225,0,.6);
+}
+
+#pics{
+	height: 10em;
+	background-color:rgba(0,0,255,.6);
+	display:flex;
+	justify-content:space-around;
+
+}
+
+#fourStep{
+	height: 10em;
+	background-color:rgba(0,255,255,.6);
+	display:flex;
+	justify-content:space-around;
+
+} 
+
+
