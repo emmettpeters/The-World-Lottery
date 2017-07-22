@@ -2,9 +2,13 @@
 	width:100%;
 }
 
-
 body {
 	margin:0px;
+}
+
+img {
+	height:5em;
+	width:5em;
 }
 
 video {
@@ -37,11 +41,7 @@ button#theWorldLottery {
 	margin-bottom:2em;
 	border-radius:1em;
 	background-color:white;
-
-
 }
-
-
 
 .fourBox {
 	height:9em;
@@ -50,8 +50,8 @@ button#theWorldLottery {
 }
 
 .socialLink {
-	height:4em;
-	width:4em;
+	height:5em;
+	width:5em;
 	border:1px solid black;
 	margin-left:1em;
 	margin-right:1em;
@@ -99,13 +99,7 @@ button#theWorldLottery {
 	display:flex;
 	justify-content:space-around;
 	padding-top:1em;
-	
-	/*background: rgba(0,255,255,.6); 
-    background: -webkit-linear-gradient(black, rgba(0,255,255,.6));
-    background: -o-linear-gradient(black, rgba(0,255,255,.6));
-    background: -moz-linear-gradient(black, rgba(0,255,255,.6));
-    background: linear-gradient(black, rgba(0,255,255,.6));
-*/}
+}
 
 #fourStep {
 	height: 11em;
@@ -114,7 +108,6 @@ button#theWorldLottery {
 	justify-content:space-around;
 	padding-top:1em;
 	margin-bottom: 1em;
-
 } 
 
 #socialLinksBack {
@@ -130,7 +123,7 @@ button#theWorldLottery {
 
 #address {
 	text-align:center;
-	padding-top:3em;
+	padding-top:2em;
 	color:rgba(255,255,255,.8);
 }
 
