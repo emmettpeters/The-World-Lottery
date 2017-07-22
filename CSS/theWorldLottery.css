@@ -2,6 +2,7 @@
 	width:100%;
 }
 
+
 body {
 	margin:0px;
 }
@@ -9,7 +10,7 @@ body {
 video {
 	padding-top:5em;
 	padding-left:30%;
-	margin-bottom:4em;
+	margin-bottom:6em;
 	height:48em;
 	min-width:30em;
 	position:relative;
@@ -30,10 +31,17 @@ button#theWorldLottery {
 }
 
 .picBox {
-	height:13em;
+	height:25em;
 	width:32%;
-	border: 1px solid black;
+	border: 2px solid white;
+	margin-bottom:2em;
+	border-radius:1em;
+	background-color:white;
+
+
 }
+
+
 
 .fourBox {
 	height:9em;
@@ -47,6 +55,8 @@ button#theWorldLottery {
 	border:1px solid black;
 	margin-left:1em;
 	margin-right:1em;
+	display:inline-block;
+	margin-top: 2em;
 }
 
 #header {
@@ -80,24 +90,30 @@ button#theWorldLottery {
 }
 
 #content {
-	height: 50em;
-	background-color:rgba(0,225,0,.6);
+	height: 55em;
+/*	background-color:rgba(68,108,179,1);*/
 }
 
 #pics {
-	height: 15em;
-	background-color:rgba(0,0,255,.6);
+	background-color:rgba(22,146,193,1);
 	display:flex;
 	justify-content:space-around;
 	padding-top:1em;
-}
+	
+	/*background: rgba(0,255,255,.6); 
+    background: -webkit-linear-gradient(black, rgba(0,255,255,.6));
+    background: -o-linear-gradient(black, rgba(0,255,255,.6));
+    background: -moz-linear-gradient(black, rgba(0,255,255,.6));
+    background: linear-gradient(black, rgba(0,255,255,.6));
+*/}
 
 #fourStep {
 	height: 11em;
-	background-color:rgba(0,255,255,.6);
+	background-color:rgba(48,214,84,1);
 	display:flex;
 	justify-content:space-around;
 	padding-top:1em;
+	margin-bottom: 1em;
 
 } 
 
@@ -115,6 +131,7 @@ button#theWorldLottery {
 #address {
 	text-align:center;
 	padding-top:3em;
+	color:rgba(255,255,255,.8);
 }
 
 
