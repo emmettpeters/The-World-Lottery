@@ -2,8 +2,25 @@
 	width:100%;
 }
 
+
 body {
 	margin:0px;
+	background-color: black;
+}
+
+img {
+	height:5em;
+	width:5em;
+}
+
+video {
+	padding-top:5em;
+	padding-left:40%;
+	margin-bottom:15em;
+	height:45em;
+	min-width:30em;
+	position:relative;
+
 }
 
 button {
@@ -12,14 +29,30 @@ button {
 	color:white;
 }
 
-button#theWorldLottery {
+#theWorldLottery {
 	color:yellow;
+}
+#heroContainer{
+	position:relative;
+	height:55em;
+}
+
+.button:hover, #theWorldLottery:hover {
+	color:orange;
 }
 
 .picBox {
-	height:13em;
+	height:27em;
 	width:32%;
-	border: 1px solid black;
+	border: 2px solid white;
+	margin-top:1em;
+	margin-bottom:1em;
+	border-radius:1em;
+	background-color:white;
+}
+
+.heroTextOpac {
+	opacity:1;
 }
 
 .fourBox {
@@ -29,11 +62,18 @@ button#theWorldLottery {
 }
 
 .socialLink {
-	height:4em;
-	width:4em;
+	height:5em;
+	width:5em;
 	border:1px solid black;
 	margin-left:1em;
 	margin-right:1em;
+	display:inline-block;
+	margin-top: 2em;
+}
+
+#spacer {
+	height:5em;
+	background-color:rgba(0,0,0,.2);
 }
 
 #header {
@@ -42,41 +82,68 @@ button#theWorldLottery {
 	display:flex;
 	justify-content:space-around;
 	position:fixed;
+	z-index: 10;
 }
 
+
 #heroArea {
-	height: 48em;
 	background-color:rgba(0,0,0,0);
 	text-align:center;
+	position:absolute;
+	top:8%;
+	padding-right:40%;
+	color:rgba(0,0,0,.5);
+
 }
 
 #heroArea h1 {
-	margin-top:0px;
-	padding-top:6em;
-	font-size:3em;
+	margin-top:15%;
+	font-size:4.5em;
+	color:#74d6ff;
 }
+#heroArea span {
+	color:white;
+	font-size:1.3em;
+}
+
+#registerButton {
+	margin-top: 2em;
+	width:50%;
+	min-width:12em;
+	background-color: rgba(0,0,0,0);
+	border:.2em solid;
+	border-color:#00ff00;
+	border-radius: 1em;
+	color:#00ff00;
+	font-size:1.3em;
+}
+
+#registerButton:hover {
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(right,rgba(0,255,0,0),rgba(0,255,0,.2),rgba(0,255,0,0)); /*Safari 5.1-6*/
+	background: -o-linear-gradient(left,rgba(0,255,0,0),rgba(0,255,0,.2),rgba(0,255,0,0)); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(left,rgba(0,255,0,0),rgba(0,255,0,.2),rgba(0,255,0,0)); /*Fx 3.6-15*/
+	background: linear-gradient(to bottom, rgba(0,255,0,0), rgba(0,255,0,.2),rgba(0,255,0,0)); /*Standard*/
+}
+
 
 #content {
-	height: 50em;
-	background-color:rgba(0,225,0,.6);
+	/*height: 55em;*/
 }
 
-#pics{
-	height: 14em;
-	background-color:rgba(0,0,255,.6);
+#pics {
+	background-color:rgba(48,214,84,1);
+	display:flex;
+	justify-content:space-around;
+}
+
+#fourStep {
+	height: 11em;
+	background-color:rgba(22,146,193,1);
 	display:flex;
 	justify-content:space-around;
 	padding-top:1em;
-
-}
-
-#fourStep{
-	height: 10em;
-	background-color:rgba(0,255,255,.6);
-	display:flex;
-	justify-content:space-around;
-	padding-top:1em;
-
+	margin-bottom: 1em;
 } 
 
 #socialLinksBack {
@@ -85,7 +152,6 @@ button#theWorldLottery {
 }
 
 #slContainer {
-	width:100%;
 	display:flex;
 	justify-content:space-between;
 	padding-top:3em;
@@ -93,7 +159,8 @@ button#theWorldLottery {
 
 #address {
 	text-align:center;
-	padding-top:3em;
+	padding-top:.5em;
+	color:rgba(255,255,255,.8);
 }
 
 
