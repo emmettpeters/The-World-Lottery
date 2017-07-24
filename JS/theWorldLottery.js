@@ -1,3 +1,3 @@
-$(window).scroll(function(){
-	$(".heroTextOpac").css("opacity",-=.1);
+$(window).scrollTop(function(){
+	$(".heroTextOpac").css("opacity",1);
 })
