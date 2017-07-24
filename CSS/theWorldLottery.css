@@ -5,6 +5,7 @@
 
 body {
 	margin:0px;
+	background-color: black;
 }
 
 img {
@@ -19,10 +20,6 @@ video {
 	height:45em;
 	min-width:30em;
 	position:relative;
-}
-
-body {
-	background-color: black;
 }
 
 button {
@@ -47,6 +44,10 @@ button {
 	margin-bottom:1em;
 	border-radius:1em;
 	background-color:white;
+}
+
+.heroTextOpac {
+	opacity:1;
 }
 
 .fourBox {
@@ -81,26 +82,30 @@ button {
 	position:absolute;
 	top:8%;
 	padding-right:40%;
+	color:rgba(0,0,0,.5);
+
 }
 
 #heroArea h1 {
 	margin-top:15%;
-	font-size:3em;
+	font-size:4.5em;
 	color:#74d6ff;
 }
 #heroArea span {
 	color:white;
+	font-size:1.3em;
 }
 
 #registerButton {
 	margin-top: 2em;
-	width:40%;
+	width:50%;
 	min-width:12em;
 	background-color: rgba(0,0,0,0);
 	border:.2em solid;
 	border-color:#00ff00;
 	border-radius: 1em;
 	color:#00ff00;
+	font-size:1.3em;
 }
 
 #registerButton:hover {
@@ -113,7 +118,7 @@ button {
 
 
 #content {
-	height: 55em;
+	/*height: 55em;*/
 }
 
 #pics {
