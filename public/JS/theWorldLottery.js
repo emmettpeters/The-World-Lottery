@@ -3,14 +3,14 @@ $(window).scroll(function (event) {
     console.log(scroll);
     if(scroll>0){	
     	$(".dropdown").slideUp(1000);
-    	// $('#header').animate({
-    	// 	"background-color":"rgba(0,0,0,1)",
-    	// },950);
+    	$("#header").animate({
+    		"opacity":".55"
+    	},950);
     } else {
     	$(".dropdown").slideDown(1000);
-    	// $('#header').animate({
-    	// 	"background-color":"rgba(0,0,0,.55)",
-    	// },950);
+    	$("#header").animate({
+    		"opacity":"1"
+    	},950);
     }
 });
 
