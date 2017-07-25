@@ -48,10 +48,10 @@ button {
 
 .buttonColor {
 	border-bottom:2px solid;
-	/*border-left:2px solid;
-	border-right:2px solid;*/
 	border-radius:1em;
 }
+
+
 
 .button:hover, #theWorldLottery:hover {
 	color:orange;
@@ -77,8 +77,6 @@ button {
 	background-color:black;
 	color:white;
 	border-radius:1em;
-	/*display:flex;
-	justify-content:center;*/
 	text-align:center;
 	margin-bottom:1em;
 }
@@ -101,14 +99,16 @@ button {
 
 #header {
 	height: 3.5em;
-	background-color:rgba(0,0,0);
-	opacity:.55;
+	background-color:rgba(0,0,0,.55);
 	display:flex;
 	justify-content:space-around;
 	position:fixed;
 	z-index: 10;
 }
 
+#header>.button {
+	opacity:1;
+}
 
 #heroArea {
 	background-color:rgba(0,0,0,0);
@@ -133,13 +133,13 @@ button {
 }
 
 #subtext {
-	font-size:8px;
+	font-size:1em;
 	color:white;
 	text-align:center;
 }
 
 .registerButton {
-	margin-top: 2em;
+	margin-top: 1em;
 	width:50%;
 	min-width:12em;
 	background-color: rgba(0,0,0,0);
@@ -151,14 +151,6 @@ button {
 }
 
 .registerButton:hover {
-	/*initial color test*/
-	/*background: rgba(0,255,0,0);
-	background: -webkit-linear-gradient(right,rgba(0,255,0,0),rgba(0,255,0,.2),rgba(0,255,0,0));
-	background: -o-linear-gradient(left,rgba(0,255,0,0),rgba(0,255,0,.2),rgba(0,255,0,0));
-	background: -moz-linear-gradient(left,rgba(0,255,0,0),rgba(0,255,0,.2),rgba(0,255,0,0));
-	background: linear-gradient(to bottom, rgba(0,255,0,0), rgba(0,255,0,.2),rgba(0,255,0,0));*/
-
-	/*different styling test*/
 	background-color:#00ff00;
 	color:white;
 
