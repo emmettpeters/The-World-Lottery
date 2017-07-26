@@ -2,16 +2,25 @@
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
     console.log(scroll);
-    if(scroll>0){	
+    var j=0;
+    if(scroll>0 && j==0){	
+        setTimeout(function(){
+            j=1;
+        },900);
     	$(".dropdown").slideUp(1000);
     	$('#header').css(
     		"background-color","black"
         );
+        
     } else {
+        setTimeout(function(){
+            j=0;
+        },900);
     	$(".dropdown").slideDown(1000);
     	$('#header').css(
     		"background-color","rgba(0,0,0,.55)"
     	);
+        
     }
 });
 
