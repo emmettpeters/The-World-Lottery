@@ -1,3 +1,4 @@
+//hero area scrolling functionality (custom -EP)
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
     console.log(scroll);
@@ -14,14 +15,13 @@ $(window).scroll(function (event) {
     }
 });
 
+//iterating through header buttons and showing the bottom border with style (custom -EP)
 var headerButtonArray =[$("#lottoB"),$("#raffleB"),$("#theWorldLottery"),$("#contact"),$("#signIn")];
 var i=0;
-
 setInterval(function(){	
 	headerButtonArray[i%5].toggleClass('buttonColor');
 	setTimeout(function(){
 		headerButtonArray[i%5].toggleClass('buttonColor');
 	i++		
-	},1900)	
+	},1800)	
 },2000);
-

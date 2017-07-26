@@ -67,10 +67,6 @@ button {
 	background-color:white;
 }
 
-.heroTextOpac {
-	opacity:1;
-}
-
 .fourBox {
 	width:23%;
 	border: 1px solid black;
@@ -130,6 +126,7 @@ button {
 #motto {
 	color:white;
 	font-size:1.3em;
+	padding-top:1em;
 }
 
 #subtext {
