@@ -8,10 +8,11 @@ $(window).scroll(function (event) {
             j=1;
         },900);
     	$(".dropdown").slideUp(1000);
-    	$('#header').css(
-    		"background-color","black"
-        );
-        
+    	setTimeout(function(){
+            $('#header').css(
+        		"background-color","black"
+            );
+        },900)
     } else {
         setTimeout(function(){
             j=0;
