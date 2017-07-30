@@ -16,7 +16,7 @@ img {
 video {
 	padding-top:5em;
 	padding-left:40%;
-	margin-bottom:15em;
+	margin-bottom:1em;
 	height:45em;
 	min-width:30em;
 	position:relative;
@@ -35,7 +35,7 @@ button {
 }
 #heroContainer{
 	position:relative;
-	height:55em;
+	height:45em;
 	z-index:5;
 }
 
@@ -93,10 +93,9 @@ button {
 }
 
 #spacer {
-	height:8em;
+	/*height:em;*/
 /*	background-color:rgba(0,0,0,0);*/
 	/*opacity:0;*/
-	visibility:hidden;
 }
 
 #header {
@@ -189,5 +188,21 @@ button {
 	padding-top:1.5em;
 	color:rgba(255,255,255,.8);
 }
+
+/*ajax*/
+#quoteButton {
+	height:80px;
+	width:80px;
+	background-color:white;
+	color:black;
+}
+
+.container{
+	color:white;
+	padding-top:5em;
+	padding-bottom: 7em;
+}
+
+
 
 
