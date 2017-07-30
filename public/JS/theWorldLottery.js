@@ -4,24 +4,28 @@ $( document ).ready(function() {
     $(window).scroll(function (event) {
         var scroll = $(window).scrollTop();
         var j=0;
-        if(scroll>0 && j==0){   
+        if(scroll>0 && j==0){
             setTimeout(function(){
                 j=1;
             },900);
+            $('.quote').animate({
+                "paddingBottom":"0"
+            });
+            $('#spacer').animate({
+                "minHeight":"10em"
+            },900);
             $(".dropdown").slideUp(1000);
-            setTimeout(function(){
-                $('#header').css(
-                    "background-color","black"
-                );
-            },900)
         } else {
             setTimeout(function(){
                 j=0;
             },900);
+            $('.quote').animate({
+                "paddingBottom":"10em"
+            }); 
+            $('#spacer').animate({
+                "minHeight":"20em"
+            },900);
             $(".dropdown").slideDown(1000);
-            $('#header').css(
-                "background-color","rgba(0,0,0,.55)"
-            );   
         }
     });
 
@@ -33,7 +37,6 @@ $( document ).ready(function() {
         setTimeout(function(){
             headerButtonArray[i%5].toggleClass('buttonColor');
         i++;
-
         },1800) 
     },2000);
 
