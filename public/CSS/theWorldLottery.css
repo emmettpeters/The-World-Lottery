@@ -203,5 +203,40 @@ button {
 	padding-bottom: 7em;
 }
 
+/*==================================================*/
+/*					MediaQuery						*/
+/*==================================================*/
+
+@media (max-width:900px) {
+    #heroArea{
+    	padding:0;
+    }
+
+    video {
+    	padding-left: 10%;
+    }
+    #heroInfoOpac {
+    	background-color: rgba(0,0,0,.4);
+    	padding-top: 2em;
+    	padding-bottom:10em;
+    	border-radius: 10em;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
