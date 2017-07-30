@@ -14,7 +14,7 @@ $( document ).ready(function() {
             $('#spacer').animate({
                 "minHeight":"10em"
             },900);
-            $(".dropdown").slideUp(1100);
+            $(".dropdown").slideUp(1000);
         } else {
             setTimeout(function(){
                 j=0;
@@ -25,7 +25,7 @@ $( document ).ready(function() {
             $('#spacer').animate({
                 "minHeight":"20em"
             },900);
-            $(".dropdown").slideDown(1100);
+            $(".dropdown").slideDown(1000);
         }
     });
 
@@ -55,8 +55,6 @@ $( document ).ready(function() {
           success: function( response ) {
             $("#random_quote").html("<p id='random_quote' class='lead text-center'>" +
               response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
-            $("#tweet").attr("href", "https://twitter.com/home/?status=" + response.quoteText +
-              ' (' + response.quoteAuthor + ')');
           }
       });
     }
