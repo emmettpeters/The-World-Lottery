@@ -32,7 +32,8 @@ $( document ).ready(function() {
         headerButtonArray[i%5].toggleClass('buttonColor');
         setTimeout(function(){
             headerButtonArray[i%5].toggleClass('buttonColor');
-        i++     
+        i++;
+
         },1800) 
     },2000);
 
@@ -61,8 +62,21 @@ $( document ).ready(function() {
       randomQuote();
     });
 
-    $("#quoteButton").click(function(){
-      randomQuote();
-    });
+
+    //setting interval of ajax quote call
+
+    var t = 0;
+    setInterval(function(){
+        if (t % 15 == 14){
+            $('.quote').fadeOut();
+            randomQuote();
+            setTimeout(function(){
+                $('.quote').fadeIn();
+            },700);
+        };  
+        t++;
+    },1000);
+
+
 
 });

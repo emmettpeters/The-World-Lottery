@@ -14,7 +14,7 @@ img {
 }
 
 video {
-	padding-top:5em;
+	padding-top:8em;
 	padding-left:40%;
 	margin-bottom:1em;
 	height:45em;
@@ -93,7 +93,7 @@ button {
 }
 
 #spacer {
-	/*height:em;*/
+	min-height:20em;
 /*	background-color:rgba(0,0,0,0);*/
 	/*opacity:0;*/
 }
@@ -202,7 +202,6 @@ button {
 	padding-top:5em;
 	padding-bottom: 7em;
 }
-
 
 
 
