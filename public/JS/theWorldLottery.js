@@ -7,25 +7,25 @@ $( document ).ready(function() {
         if(scroll>0 && j==0){
             setTimeout(function(){
                 j=1;
-            },900);
+            },600);
             $('.quote').animate({
                 "paddingBottom":"0"
             });
             $('#spacer').animate({
                 "minHeight":"10em"
             },900);
-            $(".dropdown").slideUp(1000);
+            $(".dropdown").slideUp(1100);
         } else {
             setTimeout(function(){
                 j=0;
-            },900);
+            },600);
             $('.quote').animate({
                 "paddingBottom":"10em"
             }); 
             $('#spacer').animate({
                 "minHeight":"20em"
             },900);
-            $(".dropdown").slideDown(1000);
+            $(".dropdown").slideDown(1100);
         }
     });
 
@@ -37,8 +37,8 @@ $( document ).ready(function() {
         setTimeout(function(){
             headerButtonArray[i%5].toggleClass('buttonColor');
         i++;
-        },1800) 
-    },2000);
+        },1000) 
+    },3000);
 
 
 
