@@ -14,11 +14,12 @@ function pageController(){
 		$username = inputGet('username');
 		$password = inputGet('password');
 		$email = inputGet('email');
-		$newUser = new User($username,$password,$email);
+		append("userDataBase.log",$username . "," . $password . "," . $email . "PHP_EOL");
+		// $newUser = new User($username,$password,$email);
 		$data['message'] = "You filled out all the areas correctly!";
-		var_dump($newUser);
-		append("userDataBase.log",$newUser);
+		// var_dump($newUser);
 		
+
 
 
 
