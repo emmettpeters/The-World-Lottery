@@ -40,11 +40,6 @@ $( document ).ready(function() {
         },1000) 
     },3000);
 
-
-
-
-
-
     //API
 
     function randomQuote() {
@@ -62,7 +57,6 @@ $( document ).ready(function() {
     $(function() {
       randomQuote();
     });
-
 
     //setting interval of ajax quote call
 
