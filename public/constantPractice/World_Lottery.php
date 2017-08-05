@@ -7,17 +7,36 @@ function pageController(){
 	$data = [];
 	$message = "";
 
-	if(!empty($_POST) && (inputGet('username') === "") || (inputGet('password') === "") || (inputGet('email') === ""))
+	if(!empty($_POST) && (inputGet('userName') === "") || (inputGet('password') === "") || (inputGet('email') === ""))
 	{
-		$data['message'] = "username, password and email are required to register";
+		$data['message'] = "userName, password and email are required to register";
 		return $data;
 
-	} else if ((inputGet('username') !== "") || (inputGet('password') !== "") || (inputGet('email') !== ""))
+	} else if ((inputGet('userName') !== "") || (inputGet('password') !== "") || (inputGet('email') !== ""))
 	{
-		$username = inputGet('username');
+		$userName = inputGet('userName');
 		$password = inputGet('password');
 		$email = inputGet('email');
-		$newUser = new User($username,$password,$email);
+		$rememberuserName = inputGet('rememberuserNameY');
+		$onEmailList = inputGet('onEmailListY');
+		var_dump($rememberuserName);
+		var_dump($onEmailList);
+		
+		
+		if($rememberuserName===0)
+		{
+			$rememberuserNameVal = false;
+		} else {
+			$rememberuserNameVal = true;
+		}
+		if($onEmailList===0)
+		{
+			$onEmailListVal = false;
+		} else {
+			$onEmailListVal = true;
+		}
+
+		$newUser = new User($userName,$password,$email,$onEmailListVal,$rememberuserNameVal);
 		append("userDataBase.log",json_encode($newUser) . PHP_EOL);
 
 		$data['message'] = "You filled out all the areas correctly!";
@@ -31,10 +50,10 @@ function pageController(){
 
 
 //use this on another page maybe
-	// $username = inputGet('username') ?? "";
+	// $userName = inputGet('userName') ?? "";
 	// $password = inputGet('password') ?? "";
 
-	// if (($username == "admin") && ($password == "pass") && ($email == "ejp8611@gmail.com")){
+	// if (($userName == "admin") && ($password == "pass") && ($email == "ejp8611@gmail.com")){
 	// 	header("Location:authorizeTWL.php");
 	// 	end();
 	// } else {
@@ -64,7 +83,7 @@ extract(pageController());
 			}
 		</style>
 	</head>
-	<body background="imgs/world2.jpg" id="entirebody">
+	<body background="imgs/world2.jp" id="entirebody">
 		<div id='centeringbox'>
 			<main id='main'>
 				<div id="border1">
@@ -81,7 +100,7 @@ extract(pageController());
 						<h3><?= $message ?></h3>
 					<form id="form1" method="POST" action="?">
 						<p>
-							<label for="username"><input type="text" id="username" placeholder="USERNAME" name="username"><p>------- Username -------</p></label>
+							<label for="userName"><input type="text" id="userName" placeholder="userName" name="userName"><p>------- userName -------</p></label>
 						</p>
 						<p>
 							<label for="password"><input type="password" id="password" placeholder="PW" name="password"><p>------- Password -------</p></label>
@@ -96,8 +115,8 @@ extract(pageController());
 						<p id="personalinfo">*Your personal info will only ever be viewable/editable by you
 						</p>
 						<p>
-							<label id="rememberusername" for="remember"><input type="checkbox" id="remember" name="Remember UN" value="Y" checked>Remember my username</label>
-							<label id="emaillist" for="email"><input type="checkbox" id="email" name="Remember UN" value="Y" checked>Join email list</label>
+							<label id="rememberuserName" for="remember"><input type="checkbox" id="remember" name="rememberuserNameY" value="Y" checked>Remember my userName</label>
+							<label id="emaillist" for="email"><input type="checkbox" id="email" name="onEmailListY" value="Y" checked>Join email list</label>
 						</p>
 					</form>
 					<summary>

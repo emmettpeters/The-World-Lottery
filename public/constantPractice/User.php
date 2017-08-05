@@ -5,13 +5,17 @@ class User
 	public $username;
 	public $password;
 	public $email;
+	public $onEmailList;
+	public $rememberuserName;
 	public $isLoggedIn = false;
 
-	public function __construct($username,$password,$email)
+	public function __construct($username,$password,$email,$onEmailListY,$rememberuserNameY)
 	{
 		$this->username = $username;
 		$this->password = $password;
 		$this->email = $email;
+		$this->onEmailList = $onEmailListY;
+		$this->rememberuserName = $rememberuserNameY;
 	}
 
 	public function logIn(){

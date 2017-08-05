@@ -1,3 +1,3 @@
-{"username":"emmett","password":"password","email":"ejp8611@gmail.com","isLoggedIn":false}
-{"username":"dougiedoug","password":"hispasswaodnfje","email":"douf@nas.com","isLoggedIn":false}
-{"username":"asdfh","password":"qef","email":"qwdh@adf.com","isLoggedIn":false}
+{"username":"emmettTest","password":"passwordTest","email":"email@test.com","onEmailList":false,"rememberuserName":false,"isLoggedIn":false}
+{"username":"emmett","password":"pass","email":"test@bothchecks.false","onEmailList":false,"rememberuserName":false,"isLoggedIn":false}
+{"username":"cody","password":"firsttrue","email":"secondfalse@yes.com","onEmailList":false,"rememberuserName":true,"isLoggedIn":false}
