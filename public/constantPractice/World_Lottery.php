@@ -114,11 +114,11 @@ extract(pageController());
 				<br>
 				<div id="border2">
 					<h2>
-						<a class="eee" id="l1">All of Earth,</a><br>
-						<a class="eee" id="l2">All MAJOR currencies,</a><br>
+						<a class="eee" id="l1">All of Earth</a><br>
+						<a class="eee" id="l2">All MAJOR currencies</a><br>
 						<a class="eee" id="l3">The BIGGEST prizes ever awarded!</a>
 					</h2>
-					<p id="bitcoin">(Cryptocurrency capability coming soon!!!)</p>
+					<p id="bitcoin">( Cryptocurrency capability coming soon!!! )</p>
 						<p>
 							<span id="l5">Proceeds go to selected Charities and Human Interest Projects</span>
 						</p>
@@ -126,7 +126,7 @@ extract(pageController());
 						<h3 id="errorMessage"><?= $message ?></h3>
 					<form id="form1" method="POST" action="?">
 						<p>
-							<label for="userName"><input type="text" id="userName" placeholder="USERNAME" name="userName"><p>------- username -------</p></label>
+							<label for="userName"><input type="text" id="userName" placeholder="UN" name="userName"><p>------- username -------</p></label>
 						</p>
 						<p>
 							<label for="password"><input type="password" id="password" placeholder="PW" name="password"><p>------- password -------</p></label>

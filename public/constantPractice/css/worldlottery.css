@@ -10,6 +10,12 @@ a#l2 {
 	color: gold;
 }
 
+input{
+	color:blue;
+	background-color:rgba(255,255,255,.5);
+	border:0;
+}
+
 a#l3 {
 	color: #28DE5F;
 }
@@ -37,6 +43,11 @@ a#l3 {
 	top: 125px;
 	margin: auto;
  }
+
+h3{
+	margin-bottom:20px;
+	margin-top:0;
+}
 
 body, #border2 {
 	text-align: center;
