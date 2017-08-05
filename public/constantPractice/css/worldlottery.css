@@ -1,5 +1,5 @@
 #personalinfo {
-	color: red;
+	color: yellow;
 }
 
 a#l1, h4, p {
@@ -20,6 +20,9 @@ a#l3 {
 	font-family: verdana;
 }
 
+#errorMessage{
+	color:red;
+}
 #border1 { 
 	color:rgb(255,255,255);
 	border: 2px solid white;

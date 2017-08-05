@@ -18,18 +18,18 @@ class User
 		$this->rememberuserName = $rememberuserNameY;
 	}
 
-	public function logIn(){
-		if(!$this->$isLoggedIn)
-		{
+	public function logIn()
+	{
+		if(!$this->$isLoggedIn){
 			$this->isLoggedIn = true;
 		} else {
 			echo "Youre already logged in!";
 		}
 	}
 
-	public function logOut(){
-		if($this->$isLoggedIn)
-		{
+	public function logOut()
+	{
+		if($this->$isLoggedIn){
 			$this->isLoggedIn = false;
 		} else {
 			echo "Youre already logged out!";
@@ -38,7 +38,7 @@ class User
 
 	public function changePassword($oldPassword, $newPassword)
     {
-        if($this->isLoggedIn && $oldPassword == $this->password) {
+        if($this->isLoggedIn && $oldPassword == $this->password){
             $this->password = $newPassword;
         }
     }

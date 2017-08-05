@@ -25,7 +25,7 @@ function pageController(){
 	if(!empty($_POST))
 	{
 		if ((inputGet('userName') === "") || (inputGet('password') === "") || (inputGet('email') === "")){
-			$data['message'] = "userName, password and email are required to register";
+			$data['message'] = "USERNAME, PASSWORD and EMAIL<br>are required to register a new account";
 			return $data;
 
 		} else if ((inputGet('userName') !== "") || (inputGet('password') !== "") || (inputGet('email') !== ""))
@@ -91,6 +91,7 @@ extract(pageController());
 <html>
 	<head>
 		<title>Practice Lotto Raffles</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/worldlottery.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<meta charset="utf-8">
@@ -100,39 +101,42 @@ extract(pageController());
 			}
 
 			body{
-				background-color:lightgrey;
+				background-color:#164e50;
 			}
 		</style>
 	</head>
-	<body id="entirebody">
+	<body  id="entirebody">
 		<div id='centeringbox'>
 			<main id='main'>
 				<div id="border1">
-					<h1><p class="whitetext">The <a id="top" class="world">World</a> Lottery</p></h1>
+					<h1><p class="whitetext">The <span id="top" class="world">World</span> Lottery</p></h1>
 				</div>
 				<br>
 				<div id="border2">
 					<h2>
-						<a class="eee" id="l1">ALL of Earth,</a><br>
-						<a class="eee" id="l2">ALL major currencies,</a><br>
+						<a class="eee" id="l1">All of Earth,</a><br>
+						<a class="eee" id="l2">All MAJOR currencies,</a><br>
 						<a class="eee" id="l3">The BIGGEST prizes ever awarded!</a>
 					</h2>
 					<p id="bitcoin">(Cryptocurrency capability coming soon!!!)</p>
-						<a id="l4">-------------------------------------------------------------------------</a>
-						<h3><?= $message ?></h3>
+						<p>
+							<span id="l5">Proceeds go to selected Charities and Human Interest Projects</span>
+						</p>
+						<p id="l4">-------------------------------------------------------------------------</p>
+						<h3 id="errorMessage"><?= $message ?></h3>
 					<form id="form1" method="POST" action="?">
 						<p>
-							<label for="userName"><input type="text" id="userName" placeholder="userName" name="userName"><p>------- userName -------</p></label>
+							<label for="userName"><input type="text" id="userName" placeholder="USERNAME" name="userName"><p>------- username -------</p></label>
 						</p>
 						<p>
-							<label for="password"><input type="password" id="password" placeholder="PW" name="password"><p>------- Password -------</p></label>
+							<label for="password"><input type="password" id="password" placeholder="PW" name="password"><p>------- password -------</p></label>
 						</p>
 						<p>
-							<label for="email"><input type="email" id="email" placeholder="EMAIL" name="email"><p>------- Email -------</p></label>
+							<label for="email"><input type="email" id="email" placeholder="EMAIL" name="email"><p>------- email -------</p></label>
 						</p>
 						<p>
-							<button id="createacct" type="submit">Creat account / Sign In</button>
-							<button><a href="http://www.google.com" target=_"blank">View the games without an acct</a></button>
+							<button class="btn btn-primary" id="createacct" type="submit">Creat account / Sign In</button>
+							<button class="btn btn-secondary"><a href="http://www.google.com" target=_"blank">View the games without an acct</a></button>
 						</p>
 						<p id="personalinfo">*Your personal info will only ever be viewable/editable by you
 						</p>
@@ -148,12 +152,10 @@ extract(pageController());
 						<p>
 							<a class="linkage" href="#top"><em>Top of page</em></a>
 						</p>
-						<p>
-							<a id="l5">Proceeds go to selected Charities and Human Interest Projects</a>
-						</p>
 					</summary>
 				</div>
 			</main>
 		</div>
 	</body>
+	<!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 </html>
