@@ -96,20 +96,15 @@ extract(pageController());
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<meta charset="utf-8">
 		<style type="text/css">
-			input{
-				text-align:center;
-			}
-
-			body{
-				background-color:#164e50;
-			}
+			
 		</style>
 	</head>
 	<body  id="entirebody">
+		<br>
 		<div id='centeringbox'>
 			<main id='main'>
 				<div id="border1">
-					<h1><p class="whitetext">The <span id="top" class="world">World</span> Lottery</p></h1>
+					<h1><p class="whitetext" id="top"><em>The World Lottery</em></p></h1>
 				</div>
 				<br>
 				<div id="border2">
