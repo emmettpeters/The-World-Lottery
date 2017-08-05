@@ -7,37 +7,30 @@ function pageController(){
 	$data = [];
 	$message = "";
 
-	if(!empty($_POST) && (inputGet('username') === "") || (inputGet('password') === "") || (inputGet('email') === "")){
+	if(!empty($_POST) && (inputGet('username') === "") || (inputGet('password') === "") || (inputGet('email') === ""))
+	{
 		$data['message'] = "username, password and email are required to register";
 		return $data;
-	} else if ((inputGet('username') !== "") || (inputGet('password') !== "") || (inputGet('email') !== "")){
+
+	} else if ((inputGet('username') !== "") || (inputGet('password') !== "") || (inputGet('email') !== ""))
+	{
 		$username = inputGet('username');
 		$password = inputGet('password');
 		$email = inputGet('email');
-		append("userDataBase.log",$username . "," . $password . "," . $email . PHP_EOL);
-		// $newUser = new User($username,$password,$email);
+		$newUser = new User($username,$password,$email);
+		append("userDataBase.log",json_encode($newUser) . PHP_EOL);
+
 		$data['message'] = "You filled out all the areas correctly!";
-		// var_dump($newUser);
-		
-
-
-
 
 	}
 
 
+	// if(){}
 
 
 
 
-	// if(filter_var(inputGet('email'), FILTER_VALIDATE_EMAIL) && (inputHas('email'))){
-	// 	$email = inputGet('email');
-	// } elseif(!inputHas('email')) {
-	// 	$data['message']="";
-	// } else {
-	// 	 $data['message'] = "That is not a valid email";
-	// }
-
+//use this on another page maybe
 	// $username = inputGet('username') ?? "";
 	// $password = inputGet('password') ?? "";
 
@@ -83,7 +76,7 @@ extract(pageController());
 						<a class="eee" id="l2">ALL major currencies,</a><br>
 						<a class="eee" id="l3">The BIGGEST prizes ever awarded!</a>
 					</h2>
-					<p id="bitcoin">(Bitcoin<sup>TM</sup> capability coming soon!!!)</p>
+					<p id="bitcoin">(Cryptocurrency capability coming soon!!!)</p>
 						<a id="l4">-------------------------------------------------------------------------</a>
 						<h3><?= $message ?></h3>
 					<form id="form1" method="POST" action="?">
