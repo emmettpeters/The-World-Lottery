@@ -65,6 +65,11 @@ extract(pageController());
 		<link rel="stylesheet" href="css/worldlottery.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<meta charset="utf-8">
+		<style type="text/css">
+			input{
+				text-align:center;
+			}
+		</style>
 	</head>
 	<body background="imgs/world2.jpg" id="entirebody">
 		<div id='centeringbox'>
@@ -83,13 +88,13 @@ extract(pageController());
 						<h3><?= $message ?></h3>
 					<form id="form1" method="POST" action="?">
 						<p>
-							<label for="username"><input type="text" id="username" placeholder="          USERNAME" name="username"><p>------- Username -------</p></label>
+							<label for="username"><input type="text" id="username" placeholder="USERNAME" name="username"><p>------- Username -------</p></label>
 						</p>
 						<p>
-							<label for="password"><input type="password" id="password" placeholder="                PW" name="password"><p>------- Password -------</p></label>
+							<label for="password"><input type="password" id="password" placeholder="PW" name="password"><p>------- Password -------</p></label>
 						</p>
 						<p>
-							<label for="email"><input type="email" id="email" placeholder="               EMAIL" name="email"><p>------- Email -------</p></label>
+							<label for="email"><input type="email" id="email" placeholder="EMAIL" name="email"><p>------- Email -------</p></label>
 						</p>
 						<p>
 							<button id="createacct" type="submit">Creat account / Sign In</button>
