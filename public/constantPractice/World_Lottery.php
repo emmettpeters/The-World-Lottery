@@ -6,54 +6,66 @@ require "User.php";
 function pageController(){
 	$data = [];
 	$message = "";
+	$fileName = "userDataBase.log";
 
-	if(!empty($_POST) && (inputGet('userName') === "") || (inputGet('password') === "") || (inputGet('email') === ""))
+	$handle = fopen($fileName, 'r');
+	$contents = trim(fread($handle, filesize($fileName)));
+	$contentsArray = explode("\n", $contents);
+	fclose($handle);
+
+	foreach($contentsArray as $key => $user)
 	{
-		$data['message'] = "userName, password and email are required to register";
-		return $data;
-
-	} else if ((inputGet('userName') !== "") || (inputGet('password') !== "") || (inputGet('email') !== ""))
-	{
-		$userName = inputGet('userName');
-		$password = inputGet('password');
-		$email = inputGet('email');
-		$rememberuserName = inputGet('rememberuserNameY');
-		$onEmailList = inputGet('onEmailListY');
-		var_dump($rememberuserName);
-		var_dump($onEmailList);
-		
-		
-		if($rememberuserName===0)
-		{
-			$rememberuserNameVal = false;
-		} else {
-			$rememberuserNameVal = true;
-		}
-		if($onEmailList===0)
-		{
-			$onEmailListVal = false;
-		} else {
-			$onEmailListVal = true;
-		}
-
-		$newUser = new User($userName,$password,$email,$onEmailListVal,$rememberuserNameVal);
-		append("userDataBase.log",json_encode($newUser) . PHP_EOL);
-
-		$data['message'] = "You filled out all the areas correctly!";
-
+		$userString = substr($user, 1, -1);
+		$userArray = explode(",", $userString);
+		$usersArray[] = substr($userArray[0],12,-1);
+		$emailsArray[] = substr($userArray[2],9,-1);	
 	}
 
+	var_dump($usersArray);
+	var_dump($emailsArray);
 
-	// if(){}
+	if(!empty($_POST))
+	{
+		if ((inputGet('userName') === "") || (inputGet('password') === "") || (inputGet('email') === "")){
+			$data['message'] = "userName, password and email are required to register";
+			return $data;
+
+		} else if ((inputGet('userName') !== "") || (inputGet('password') !== "") || (inputGet('email') !== "")){
+
+			
+			if(in_array(inputGet('userName'),$usersArray) && in_array(inputGet('email'),$emailsArray)){
+				echo "its not in the array";
+			}
+
+			$userName = inputGet('userName');
+			$password = inputGet('password');
+			$email = inputGet('email');
+			$rememberuserName = inputGet('rememberuserNameY');
+			$onEmailList = inputGet('onEmailListY');
+
+			if($rememberuserName===0){
+				$rememberuserNameVal = false;
+			} else {
+				$rememberuserNameVal = true;
+			}
+			if($onEmailList===0){
+				$onEmailListVal = false;
+			} else {
+				$onEmailListVal = true;
+			}
+			$newUser = new User($userName,$password,$email,$onEmailListVal,$rememberuserNameVal);
+			append($fileName,json_encode($newUser) . PHP_EOL);
+			$data['message'] = "You filled out all the areas correctly!";
+
+		}
+	}
+	
 
 
 
 
-//use this on another page maybe
-	// $userName = inputGet('userName') ?? "";
-	// $password = inputGet('password') ?? "";
 
-	// if (($userName == "admin") && ($password == "pass") && ($email == "ejp8611@gmail.com")){
+	// if (($userName == "") && ($password == "pass") && ($email == "ejp8611@gmail.com")){
 	// 	header("Location:authorizeTWL.php");
 	// 	end();
 	// } else {
@@ -81,14 +93,19 @@ extract(pageController());
 			input{
 				text-align:center;
 			}
+
+			body{
+				background-color:lightgrey;
+			}
 		</style>
 	</head>
-	<body background="imgs/world2.jp" id="entirebody">
+	<body id="entirebody">
 		<div id='centeringbox'>
 			<main id='main'>
 				<div id="border1">
 					<h1><p class="whitetext">The <a id="top" class="world">World</a> Lottery</p></h1>
 				</div>
+				<br>
 				<div id="border2">
 					<h2>
 						<a class="eee" id="l1">ALL of Earth,</a><br>
@@ -115,8 +132,8 @@ extract(pageController());
 						<p id="personalinfo">*Your personal info will only ever be viewable/editable by you
 						</p>
 						<p>
-							<label id="rememberuserName" for="remember"><input type="checkbox" id="remember" name="rememberuserNameY" value="Y" checked>Remember my userName</label>
 							<label id="emaillist" for="email"><input type="checkbox" id="email" name="onEmailListY" value="Y" checked>Join email list</label>
+							<label id="rememberuserName" for="remember"><input type="checkbox" id="remember" name="rememberuserNameY" value="Y" checked>Remember my userName</label>
 						</p>
 					</form>
 					<summary>
