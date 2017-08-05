@@ -6,6 +6,7 @@ require "User.php";
 function pageController(){
 	$data = [];
 	$message = "";
+	$data['message']="";
 	$fileName = "userDataBase.log";
 
 	$handle = fopen($fileName, 'r');
@@ -21,42 +22,46 @@ function pageController(){
 		$emailsArray[] = substr($userArray[2],9,-1);	
 	}
 
-	var_dump($usersArray);
-	var_dump($emailsArray);
-
 	if(!empty($_POST))
 	{
 		if ((inputGet('userName') === "") || (inputGet('password') === "") || (inputGet('email') === "")){
 			$data['message'] = "userName, password and email are required to register";
 			return $data;
 
-		} else if ((inputGet('userName') !== "") || (inputGet('password') !== "") || (inputGet('email') !== "")){
-
-			
-			if(in_array(inputGet('userName'),$usersArray) && in_array(inputGet('email'),$emailsArray)){
-				echo "its not in the array";
+		} else if ((inputGet('userName') !== "") || (inputGet('password') !== "") || (inputGet('email') !== ""))
+		{
+			if (in_array(inputGet('userName'),$usersArray) && inputGet('userName') !== null){
+				$data['message']="Username has already been taken";
+				return $data;
 			}
 
-			$userName = inputGet('userName');
-			$password = inputGet('password');
-			$email = inputGet('email');
-			$rememberuserName = inputGet('rememberuserNameY');
-			$onEmailList = inputGet('onEmailListY');
-
-			if($rememberuserName===0){
-				$rememberuserNameVal = false;
-			} else {
-				$rememberuserNameVal = true;
+			if (in_array(inputGet('email'),$emailsArray) && inputGet('email') !== null){
+				$data['message']="Email has already been taken";
+				return $data;
 			}
-			if($onEmailList===0){
-				$onEmailListVal = false;
-			} else {
-				$onEmailListVal = true;
-			}
-			$newUser = new User($userName,$password,$email,$onEmailListVal,$rememberuserNameVal);
-			append($fileName,json_encode($newUser) . PHP_EOL);
-			$data['message'] = "You filled out all the areas correctly!";
 
+			if(!in_array(inputGet('userName'),$usersArray) && !in_array(inputGet('email'),$emailsArray))
+			{
+				$userName = inputGet('userName');
+				$email = inputGet('email');
+				$password = inputGet('password');
+				$rememberuserName = inputGet('rememberuserNameY');
+				$onEmailList = inputGet('onEmailListY');
+
+				if($rememberuserName===0){
+					$rememberuserNameVal = false;
+				} else {
+					$rememberuserNameVal = true;
+				}
+				if($onEmailList===0){
+					$onEmailListVal = false;
+				} else {
+					$onEmailListVal = true;
+				}
+				$newUser = new User($userName,$password,$email,$onEmailListVal,$rememberuserNameVal);
+				append($fileName,json_encode($newUser) . PHP_EOL);
+				
+			}
 		}
 	}
 	
@@ -72,7 +77,7 @@ function pageController(){
 	// 	$message = "You do not have proper access rights to login";
 	// }
 
-	$data["message"] = $message;
+	// $data["message"] = $message;
 
 	return $data;
 
