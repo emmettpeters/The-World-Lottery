@@ -14,10 +14,10 @@ img {
 }
 
 video {
-	padding-top:8em;
+	padding-top:6em;
 	padding-left:40%;
 	margin-bottom:1em;
-	max-height:48em;
+	max-height:50em;
 	min-width:35em;
 	position:relative;
 	z-index
@@ -76,6 +76,8 @@ button {
 	text-align:center;
 	margin-bottom:1em;
 	margin-top:1em;
+	padding-left:1em;
+	padding-right:1em;
 }
 
 .fourIcons {
