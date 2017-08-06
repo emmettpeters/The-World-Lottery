@@ -72,6 +72,11 @@ $( document ).ready(function() {
         t++;
     },1000);
 
+    $('#register').click(function(){
+        $(this).toggleClass('colorChange');
+        $('form').slideToggle();
+    })
+
 
 
 });

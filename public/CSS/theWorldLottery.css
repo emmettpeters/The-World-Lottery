@@ -15,7 +15,7 @@ img {
 
 video {
 	padding-top:8em;
-	padding-left:30%;
+	padding-left:40%;
 	margin-bottom:1em;
 	max-height:48em;
 	min-width:35em;
@@ -114,8 +114,8 @@ button {
 	background-color:rgba(0,0,0,0);
 	text-align:center;
 	position:absolute;
-	top:1%;
-	padding-right:25%;
+	top:10%;
+	padding-right:30%;
 	color:rgba(0,0,0,.5);
 
 }
@@ -139,7 +139,7 @@ button {
 	text-align:center;
 }
 
-.registerButton {
+.registerButtons {
 	margin-top: 1em;
 	margin-bottom:1em;
 	width:50%;
@@ -150,12 +150,38 @@ button {
 	font-size:1.3em;
 	border-color:#00ff00;
 	color:#00ff00;
+	text-align: center;
 }
 
-.registerButton:hover {
+.registerInput{
+	margin-top: .2em;
+	margin-bottom:.2em;
+	width:40%;
+	min-width:12em;
+	background-color: rgba(0,0,0,0);
+	border:1px solid;
+	/*border-radius: 1em;*/
+	font-size:1.3em;
+	border-color:#00ff00;
+	color:white;
+	text-align: center;
+}
+
+::-webkit-input-placeholder {
+    color:#00ff00;
+}
+
+.colorChange {
 	background-color:#00ff00;
 	color:white;
+}
 
+.registerButtons:active {
+	background-color:#00ff00;
+	color:white;
+}
+.hidden{
+	display:none;
 }
 
 #pics {
@@ -204,6 +230,7 @@ button {
 
 #quoteSpaceMaintainer {
 	min-height:13em;
+	padding-top:2em;
 }
 
 /*==================================================*/

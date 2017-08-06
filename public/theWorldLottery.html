@@ -14,9 +14,7 @@
 		<button id="raffleB" class="button" >Raffles</button>
 		<button id="theWorldLottery" class="button" >The World Lottery</button>
 		<button id="contact" class="button" >Contact/Info</button>
-		<!-- maybe change Sign In to the picture of account -->
-		<button id="signIn" class="button" >Sign In</button>
-		<!--<div class="account">Account Picture</div>-->
+		<button id="signIn" class="button" >Log In</button>
 	</div>
 	
 	<div id="heroContainer" class="dropdown">
@@ -27,8 +25,13 @@
 			<div id="heroInfoOpac">
 				<h1 class="heroTextOpac">The World Lottery</h1>
 				<div id="subtext">ALL proceeds go to selected charities, human interest projects<br>and TWL staff, development, maintenence and security.</div><br>
-				<button id="" class="registerButton heroTextOpac">REGISTER</button><br>
-				<button id="" class="registerButton heroTextOpac">LOGIN</button><br>
+				<button id="register" class="registerButtons">REGISTER / LOGIN</button><br>
+				<form method="POST" hidden>
+					<input class="registerInput" placeholder="Username"><br>
+					<input class="registerInput" type="password" placeholder="Password"><br>
+					<input class="registerInput" type="email" placeholder="Email"><br>
+					<button id="login" type="submit" class="registerButtons">GO!</button><br>
+				</form>
 				<span class="heroTextOpac" id="motto">We're trying to save the World.<br>You can bet on that. =)</span>
 			</div>
 		</div>
