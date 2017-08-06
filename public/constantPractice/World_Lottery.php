@@ -58,26 +58,12 @@ function pageController(){
 				} else {
 					$onEmailListVal = true;
 				}
-				$newUser = new User($userName,$password,$email,$onEmailListVal,$rememberuserNameVal);
+				$newUser = new User($userName,$password,$email,$onEmailListVal,$rememberuserNameVal); 
 				append($fileName,json_encode($newUser) . PHP_EOL);
 				
 			}
 		}
 	}
-	
-
-
-
-
-
-	// if (($userName == "") && ($password == "pass") && ($email == "ejp8611@gmail.com")){
-	// 	header("Location:authorizeTWL.php");
-	// 	end();
-	// } else {
-	// 	$message = "You do not have proper access rights to login";
-	// }
-
-	// $data["message"] = $message;
 
 	return $data;
 
