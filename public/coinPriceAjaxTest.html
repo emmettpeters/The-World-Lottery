@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coin price ajax test</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<button><h1>Ajax test</h1></button>
+</body>
+<script src="JS/jquery-3.2.1.js"></script>
+<script>
+	function coinPriceConversion(){
+		$.ajax({
+			url: 'https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=BTC,ETH,LTC,EUR',
+			type: 'GET',
+			dataType: 'json'
+		})
+		.done(function(response) {
+			console.log("success");
+			console.log(response);
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+	}
+
+	$('button').click(function(){
+		coinPriceConversion();
+	})
+</script>
+
+</html>
+
