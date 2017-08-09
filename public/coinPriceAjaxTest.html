@@ -1,3 +1,6 @@
+<?php 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,19 +8,67 @@
 	<meta charset="utf-8">
 </head>
 <body>
-	<button><h1>Ajax test</h1></button>
+	<div id="ajaxTest">
+		<button><h1>Ajax test</h1></button><br>
+		<label>USD to BTC -> <span id="usdBTC"></span></label><br>
+		<label>USD to ETH -> <span id="usdETH"></span></label><br>
+		<!-- <label>USD to LTC -> <span id="usdLTC"></span></label><br>
+		<label>USD to BCC -> <span id="usdBCC"></span></label><br>
+		<label>USD to EUR -> <span id="usdEUR"></span></label><br>
+		<label>USD to JPY -> <span id="usdJPY"></span></label><br>
+		<label>USD to GBP -> <span id="usdGBP"></span></label><br>
+		<label>USD to CHF -> <span id="usdCHF"></span></label><br>
+		<label>USD to CAD -> <span id="usdCAD"></span></label><br>
+		<label>USD to AUD -> <span id="usdAUD"></span></label><br>
+		<label>USD to NZD -> <span id="usdNZD"></span></label><br>
+		<label>USD to ZAR -> <span id="usdZAR"></span></label><br> -->
+	</div>
+	<form method="POST">
+		<label>How many tickets?<input name="ticketCount"></label><br>
+		<select>
+			<option name="currency" value="USD">USD - Dollar</option>
+			<option name="currency" value="BTC">Bitcoin</option>
+			<option name="currency" value="ETH">Etherium</option>
+			<!-- <option name="currency" value="LTC">Litecoin</option>
+			<option name="currency" value="BCC">Bitcoin Cash</option>
+			<option name="currency" value="EUR">EUR - Euro</option>
+			<option name="currency" value="JPY">JPY - Yen</option>
+			<option name="currency" value="GBP">GBP - Pound</option>
+			<option name="currency" value="CHF">CHF - Frank</option>
+			<option name="currency" value="CAD">CAD - Canadian Dollar</option>
+			<option name="currency" value="AUD">AUD - Australian Dollar</option>
+			<option name="currency" value="NZD">NZD - New Zeland Dollar</option>
+			<option name="currency" value="ZAR">ZAR - South African Rand</option> -->
+		</select>
+	</form>
+
+
+
 </body>
 <script src="JS/jquery-3.2.1.js"></script>
 <script>
 	function coinPriceConversion(){
 		$.ajax({
-			url: 'https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=BTC,ETH,LTC,EUR,JPY,GBP,CHF,CAD,AUD,ZAR',
+			url: 'https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=BTC,ETH,LTC,BCC,EUR,JPY,GBP,CHF,CAD,AUD,NZD,ZAR',
 			type: 'GET',
 			dataType: 'json'
 		})
 		.done(function(response) {
 			console.log("success");
-			console.log(response);
+			console.log(response.BTC);
+			$btcConvert = response.BTC;
+			$ethConvert = response.ETH;
+			$ltcConvert = response.LTC;
+			$bccConvert = response.BCC;
+			$eurConvert = response.EUR;
+			$jpyConvert = response.JPY;
+			$gbpConvert = response.GBP;
+			$chfConvert = response.CHF;
+			$cadConvert = response.CAD;
+			$audConvert = response.AUD;
+			$nzdConvert = response.NZD;
+			$zarConvert = response.ZAR;
+
 		})
 		.fail(function() {
 			console.log("error");
@@ -29,6 +80,19 @@
 
 	$('button').click(function(){
 		coinPriceConversion();
+		$('#usdBTC').text($btcConvert);
+		$('#usdETH').text($ethConvert);
+		$('#usdLTC').text($ltcConvert);
+		$('#usdBCC').text($bccConvert);
+		$('#usdEUR').text($eurConvert);
+		$('#usdJPY').text($jpyConvert);
+		$('#usdGBP').text($gbpConvert);
+		$('#usdCHF').text($chfConvert);
+		$('#usdCAD').text($cadConvert);
+		$('#usdAUD').text($audConvert);
+		$('#usdNZD').text($nzdConvert);
+		$('#usdZAR').text($zarConvert);
+
 	})
 </script>
 
