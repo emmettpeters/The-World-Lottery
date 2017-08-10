@@ -106,19 +106,19 @@ extract(pageController());
 		<label>USD to NZD -> <input id="usdNZD" name="usdNZD"></label><br>
 		<label>USD to ZAR -> <input id="usdZAR" name="usdZAR"></label><br>
 		<select name="currency">
-			<option name="currency" value="USD">USD - Dollar</option>
+			<option name="currency" value="USD">USD - Dollars</option>
 			<option name="currency" value="BTC">BTC - Bitcoin</option>
 			<option name="currency" value="ETH">ETH - Etherium</option>
 			<option name="currency" value="LTC">LTC - Litecoin</option>
 			<option name="currency" value="BCC">BCC - Bitcoin Cash</option>
-			<option name="currency" value="EUR">EUR - Euro</option>
+			<option name="currency" value="EUR">EUR - Euros</option>
 			<option name="currency" value="JPY">JPY - Yen</option>
-			<option name="currency" value="GBP">GBP - Pound</option>
-			<option name="currency" value="CHF">CHF - Frank</option>
-			<option name="currency" value="CAD">CAD - Canadian Dollar</option>
-			<option name="currency" value="AUD">AUD - Australian Dollar</option>
-			<option name="currency" value="NZD">NZD - New Zeland Dollar</option>
-			<option name="currency" value="ZAR">ZAR - South African Rand</option>
+			<option name="currency" value="GBP">GBP - Pounds</option>
+			<option name="currency" value="CHF">CHF - Franks</option>
+			<option name="currency" value="CAD">CAD - Canadian Dollars</option>
+			<option name="currency" value="AUD">AUD - Australian Dollars</option>
+			<option name="currency" value="NZD">NZD - New Zeland Dollars</option>
+			<option name="currency" value="ZAR">ZAR - South African Rands</option>
 		</select>
 		<button type='submit'>Submit</button>
 	</form>
