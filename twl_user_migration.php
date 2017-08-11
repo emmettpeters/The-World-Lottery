@@ -14,6 +14,6 @@ $statement = "CREATE TABLE IF NOT EXISTS twl_users (
     remember_username TINYINT,
     PRIMARY KEY (id)
     );
-";
+";	
 
 $dbc->exec($statement);
