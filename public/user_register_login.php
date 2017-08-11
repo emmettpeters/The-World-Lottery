@@ -20,10 +20,13 @@ function pageController($dbc){
 		} else {
 			$on_email_list = 0;
 		};
-		$statement = "INSERT INTO twl_users (username,password,email,create_date,on_email_list)
-		VALUES('$username','$password','$email','$create_date','$on_email_list')";
+		$query = "INSERT INTO twl_users (username,password,email,create_date,on_email_list)
+		VALUES(?,?,?,?,?)";
 
-		$dbc->exec($statement);
+		$stmt = $dbc->prepare($query);
+
+		$stmt->execute(array($username,$password,$email,$create_date,$on_email_list));
+
 	}
 
 	return $data;
