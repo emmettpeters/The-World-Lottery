@@ -9,8 +9,15 @@ require_once "functions.php";
 function pageController($dbc){
 	$data=[];
 
+	//searching for all users
+	$query = 'SELECT * FROM twl_users';
+	$stmt = $dbc->query($query);
+	$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	print_r($result);
+
 	if (!empty($_REQUEST) && (inputGet('username') !== "") && (inputGet('password') !== "") && (inputGet('email') !== "")){
 		echo "it fired!";
+
 		$username = inputGet('username');
 		$password = inputGet('password');
 		$email = inputGet('email');

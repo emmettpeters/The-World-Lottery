@@ -17,6 +17,6 @@ $statement = "CREATE TABLE IF NOT EXISTS twl_users (
     PRIMARY KEY (id),
     UNIQUE (username, email)
     );
-";	
+";
 
 $dbc->exec($statement);
