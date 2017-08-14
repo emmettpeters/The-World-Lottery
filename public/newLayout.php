@@ -15,13 +15,12 @@
 <body>
 	<div class="container" id="header">
 		<div class="row" id="topRow">
-			<a class="topRowButtons">Contact Us</a>
-			<h1>THE WORLD LOTTERY</h1>
-			<a class="topRowButtons">Log In</a>
+			<!-- <a class="topRowButtons">Contact Us</a> -->
+			<h3 class="col-xs-10">THE WORLD LOTTERY</h3>
+			<a class="col-xs-2 login">Log In</a>
 		</div>
-			<hr>
 		<div class="row" id="links">
-			<a>Lotteries</a><a>Raffles</a><a>Contact us</a><a>Suggestion Box</a><a>Currency Conversions</a>
+			<div class="link">Lotteries</div><div class="link">Raffles</div><div class="link">Currency Conversions</div><div class="link">About TWL</div><div class="link">Suggestion Box</div><div class="link">Contact Us</div>
 		</div>
 	</div>
 	<div class="footer">This footer will always be positioned at the bottom of the page, but <strong>not fixed</strong>.</div>
