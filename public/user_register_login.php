@@ -13,7 +13,7 @@ function pageController($dbc){
 	$query = 'SELECT * FROM twl_users';
 	$stmt = $dbc->query($query);
 	$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	print_r($result);
+	var_dump($result);
 
 	if (!empty($_REQUEST) && (inputGet('username') !== "") && (inputGet('password') !== "") && (inputGet('email') !== "")){
 		echo "it fired!";
