@@ -1,0 +1,41 @@
+body{
+	background-image:url("earthAtNight.jpg");
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+
+	color:white;
+}
+
+body {
+	margin:0;
+	padding:0;
+}
+
+h1 {
+	color:white;
+}
+
+hr {
+	margin-top: .5em;
+}
+
+#links {
+	display:flex;
+	justify-content: space-around;
+}
+
+#topRow {
+	display:flex;
+	justify-content: space-between;
+}
+
+.topRowButtons {
+  margin-top: 1.8em;
+}
+
+a {
+	color:lightblue;
+}
+
