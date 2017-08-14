@@ -11,6 +11,9 @@ body{
 body {
 	margin:0;
 	padding:0;
+	position: relative;
+	padding-bottom: 6rem;
+	min-height: 100%;
 }
 
 h1 {
@@ -37,5 +40,26 @@ hr {
 
 a {
 	color:lightblue;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: rgba(255,255,255,0);
+  text-align: center;
 }
 
