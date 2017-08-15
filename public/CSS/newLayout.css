@@ -20,17 +20,17 @@ h3 {
 #links {
 	align-content: center;
 	text-align: center;
-	color:lightblue;
 }
 
 .link {
 	width:50%;
 	float:left;
+	color:lightblue;
 }
 
 
 .login {
-  margin-top: 2.1em;
+  margin-top: 1.6em;
 }
 
 html {
@@ -54,17 +54,44 @@ html {
   text-align: center;
 }
 
-@media (min-width:550px) {
+.mainParts {
+	height:60em;
+	background-color: rgba(255,255,255,.18);
+	border: 1px solid white;
+	border-radius: 2em;
+	text-align:center;
+}
+
+#partOne {
+	width:100%;
+
+}
+#partTwo {
+	width:100%;
+}
+
+
+@media (min-width:600px) {
 	#links {
 		border:1px solid white;
 		border-radius: 10em;
 		padding-top:.8em;
 		padding-bottom: .8em;
-		background-color: rgba(255,255,255,.15);
+		background-color: rgba(255,255,255,.18);
 		display:flex;
 		justify-content: space-between;
 	}
 
+	#partOne {
+		width:66.3%;
+		margin-right:1.4%;
+		float:left;
+	}
+
+	#partTwo {
+		width:32.3%;
+		float:left;
+	}
 
 }
 

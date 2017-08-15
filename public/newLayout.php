@@ -13,17 +13,28 @@
 	<title>New Layout</title>
 </head>
 <body>
-	<div class="container" id="header">
-		<div class="row" id="topRow">
-			<!-- <a class="topRowButtons">Contact Us</a> -->
-			<h3 class="col-xs-10">THE WORLD LOTTERY</h3>
-			<a class="col-xs-2 login">Log In</a>
+	<!-- header to template later -->
+	
+<?php include "newLayoutHeader.php"; ?>
+<br>
+
+<div class="container">
+	<div class="row">
+		<div id="partOne" class="mainParts">
+			<h3>Game Area</h3><hr>
 		</div>
-		<div class="row" id="links">
-			<div class="link">Lotteries</div><div class="link">Raffles</div><div class="link">Currency Conversions</div><div class="link">About TWL</div><div class="link">Suggestion Box</div><div class="link">Contact Us</div>
+		<div id="partTwo" class="mainParts">
+			<h3>Chat Area</h3><hr>
 		</div>
 	</div>
-	<div class="footer">This footer will always be positioned at the bottom of the page, but <strong>not fixed</strong>.</div>
+</div>
+
+
+
+
+<?php include "newLayoutFooter.php"; ?>
+
+	
 	
 
 </body>
