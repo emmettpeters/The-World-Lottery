@@ -21,21 +21,27 @@
 <div class="container">
 	<div class="row">
 		<div id="partOne" class="mainParts">
-			<h3>Game Area</h3><hr>
+			<h4>Game Area</h4><hr>
 		</div>
 		<div id="partTwo" class="mainParts">
-			<h3>Chat Area</h3><hr>
+			<div id="heightMaint">
+				<h4>Chat Area</h4><hr>
+				<div id='chatContent'>
+				</div>
+			</div>
+			<form method="POST">
+				<input id="chatInput" name="chatInput" placeholder="Say Something">
+			</form>
+			<div id="partThree" class="mainParts">
+				<h4>Other Area</h4><hr>
+			</div>
 		</div>
 	</div>
 </div>
+<div id="footerSpacer">
+</div>
 
-
-
-
-<?php include "newLayoutFooter.php"; ?>
-
-	
-	
+<?php include "newLayoutFooter.php"; ?>	
 
 </body>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -43,6 +49,16 @@
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous">
+</script>
+<script type="text/javascript">
+	
+	$(function(){
+	    var x = 0;
+	    setInterval(function(){
+	        x-=1;
+	        $('body').css('background-position', x + 'px 0');
+	    }, 80);
+	});
 </script>
 
 </html>

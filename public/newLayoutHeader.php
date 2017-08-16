@@ -2,7 +2,7 @@
 	<div class="row" id="topRow">
 		<!-- <a class="topRowButtons">Contact Us</a> -->
 		<h2 class="col-xs-10">THE WORLD LOTTERY</h2>
-		<a class="col-xs-2 login">Log In</a>
+		<a class="col-xs-2 login">Account</a>
 	</div>
 	<div class="row" id="links">
 		<div class="link">Lotteries</div><div class="link">Raffles</div><div class="link">Currency Conversions</div><div class="link">About TWL</div><div class="link">Suggestion Box</div><div class="link">Contact Us</div>
