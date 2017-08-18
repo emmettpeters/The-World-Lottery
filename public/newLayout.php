@@ -17,7 +17,12 @@
 	
 <?php include "newLayoutHeader.php"; ?>
 <br>
-
+<div class="container">
+	<div class="row" id="links">
+		<input name="username" placeholder="Username"><input placeholder="Password" type="password" name="password"><input placeholder="Email" type="email" name="email">
+	</div>
+</div>
+<br>
 <div class="container">
 	<div class="row">
 		<div id="partOne" class="mainParts">
@@ -38,8 +43,8 @@
 		</div>
 	</div>
 </div>
-<div id="footerSpacer">
-</div>
+
+
 
 <?php include "newLayoutFooter.php"; ?>	
 
