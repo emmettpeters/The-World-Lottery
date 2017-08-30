@@ -16,7 +16,7 @@
 		
 <?php include "newLayoutHeader.php"; ?>
 <br>
-<?php include "newLayoutLinks.php"; ?>
+<?php include "newLayoutInputs.php"; ?>
 <br>
 <div class="container">
 	<div class="row">
